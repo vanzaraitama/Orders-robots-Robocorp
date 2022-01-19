@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.8.10 on win32)" generated="20220118 14:16:48.545" rpa="true" schemaversion="2">
+<suite id="s1" name="Tasks" source="c:\Users\VanzaRaitama\Documents\Robocorp\Certificate-Robocorp-Level-2\tasks.robot">
+<test id="s1-t1" name="Order robots from RobotSpareBin Industries Inc">
+<kw name="Open the robot order website">
+<kw name="Open Browser">
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<arg>executable_path=${DRIVER}</arg>
+<msg timestamp="20220118 14:16:48.686" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" starttime="20220118 14:16:48.686" endtime="20220118 14:16:48.711"/>
+</kw>
+<status status="FAIL" starttime="20220118 14:16:48.681" endtime="20220118 14:16:48.717"/>
+</kw>
+<status status="FAIL" starttime="20220118 14:16:48.676" endtime="20220118 14:16:48.720">No keyword with name 'Open Browser' found.</status>
+</test>
+<doc>Orders robots from RobotSpareBin Industries Inc.
+Saves the order HTML receipt as a PDF file.
+Saves the screenshot of the ordered robot.
+Embeds the screenshot of the robot to the PDF receipt.
+Creates ZIP archive of the receipts and the images.</doc>
+<status status="FAIL" starttime="20220118 14:16:48.557" endtime="20220118 14:16:48.727"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tasks">Tasks</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220118 14:16:48.670" level="ERROR">Error in file 'c:\Users\VanzaRaitama\Documents\Robocorp\Certificate-Robocorp-Level-2\tasks.robot' on line 7: Importing library 'RPA.Browser.Selenium' failed: ModuleNotFoundError: No module named 'RPA.Browser'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\VanzaRaitama\.vscode\extensions\robocorp.robotframework-lsp-0.36.0\src\robotframework_debug_adapter
+  C:\Users\VanzaRaitama\Documents\Robocorp\Certificate-Robocorp-Level-2
+  c:\Users\VanzaRaitama\.vscode\extensions\robocorp.robotframework-lsp-0.36.0\src
+  c:\Users\VanzaRaitama\.vscode\extensions\robocorp.robotframework-lsp-0.36.0\src\robotframework_ls\vendored
+  C:\Users\VanzaRaitama\AppData\Local\robocorp\holotree\b1f3c244e_9679c063\python38.zip
+  C:\Users\VanzaRaitama\AppData\Local\robocorp\holotree\b1f3c244e_9679c063\DLLs
+  C:\Users\VanzaRaitama\AppData\Local\robocorp\holotree\b1f3c244e_9679c063\lib
+  C:\Users\VanzaRaitama\AppData\Local\robocorp\holotree\b1f3c244e_9679c063
+  C:\Users\VanzaRaitama\AppData\Local\robocorp\holotree\b1f3c244e_9679c063\lib\site-packages</msg>
+</errors>
+</robot>
