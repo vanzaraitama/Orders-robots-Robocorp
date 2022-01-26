@@ -11,9 +11,10 @@ Library           RPA.Tables
 Library           RPA.PDF
 Library           RPA.Archive
 Library           RPA.FileSystem
+Library           RPA.Robocorp.Vault
 
 *** Variables ***
-${URL}      https://robotsparebinindustries.com/#/robot-order
+# ${URL}      https://robotsparebinindustries.com/#/robot-order
 ${DRIVER}   C://chromedriver
 ${URL_CSV}  https://robotsparebinindustries.com/orders.csv
 
@@ -23,7 +24,11 @@ ${PDF_TEMP_OUTPUT_DIRECTORY}    ${CURDIR}${/}temp
 
 *** Keywords ***
 Open the robot order website
-    Open Browser    ${URL}    chrome    executable_path=${DRIVER}
+    ${URL}=    Get Secret    credentials
+    Log Many      ${URL}
+    Open Available Browser      ${URL}[robotsparebin]
+
+    # Open Browser    ${URL}[robotsparebin]    chrome    executable_path=${DRIVER}
     Maximize Browser Window
     Sleep    5000ms
 
